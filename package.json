@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@dedust/sdk": "^0.8.7",
+    "@ton/core": "^0.59.0",
+    "@ton/crypto": "^3.3.0",
+    "@ton/ton": "^15.1.0",
     "@tonconnect/ui-react": "^2.0.9",
     "next": "14.2.15",
     "react": "^18",

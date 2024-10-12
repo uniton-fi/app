@@ -6,21 +6,21 @@ import Image from "next/image";
 const MobileNav = () => {
     return (
         <div className={styles.mobileNav}>
-            <MobileNavItem iconName={'/icon_home.png'} name={'Swap'} path={'/'}/>
-            <MobileNavItem iconName={'/icon_pools.png'} name={'Pools'} path={'/pools'}/>
-            <MobileNavItem iconName={'/icon_portfolio.png'} name={'Portfolio'} path={'/portfolio'}/>
+            <MobileNavItem iconName={'/SwapIcon.svg'} name={'Swap'} path={'/'} titleClass={styles.mobileTitleActive}/>
+            <MobileNavItem iconName={'/PoolsIcon.svg'} name={'Pools'} path={'/pools'} titleClass={styles.mobileTitle} />
+            <MobileNavItem iconName={'/PortfolioIcon.svg'} name={'Portfolio'} path={'/portfolio'} titleClass={styles.mobileTitle} />
         </div>
     );
 };
 
-const MobileNavItem = ({iconName, name, path}) => {
+const MobileNavItem = ({iconName, name, path, titleClass}) => {
     return (
-        <div>
-            <Link href={path}>
-                <Image src={iconName} alt={name} width="20" height="20" />
-                <span>{name}</span>
-            </Link>
-        </div>
+        <Link href={path}>
+            <div className={styles.mobileItem}>
+                <Image src={iconName} alt={name} width="21" height="21" />
+                <span className={titleClass}>{name}</span>
+            </div>
+        </Link>
     )
 }
 

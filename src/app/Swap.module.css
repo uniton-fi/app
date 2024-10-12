@@ -1,0 +1,76 @@
+.swapContainer {
+	padding: 0 24px;
+}
+
+.swapTitle {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 12px;
+}
+
+.swapInputContainer {
+	padding: 16px;
+	border-radius: 12px;
+	margin-bottom: 4px;
+	background-color: var(--dark-gray);
+}
+
+.swapWidgetContainer {
+	position: relative;
+}
+
+.exchangeIcon {
+	position: absolute;
+	top: calc(50% - 20px);
+	left: calc(50% - 20px);
+	padding: 6px 8px;
+	border-radius: 50%;
+	background-color: black;
+}
+
+.swapInputTitle {
+	font-size: 16px;
+	margin-bottom: 16px;
+}
+
+.swapInputLine {
+	display: flex;
+	align-items: center;
+}
+
+.swapTokenTitle {
+	flex-grow: 1;
+	font-size: 18px;
+	margin-left: 8px;
+}
+
+.swapInputField {
+	font-size: 34px;
+	font-weight: bold;
+	background: transparent;
+	border: none;
+	text-align: right;
+	width: 170px;
+}
+
+.swapBalance {
+	color: var(--light-gray);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 14px;
+	margin-top: 16px;
+}
+
+.swapButton {
+	padding: 12px 16px;
+	font-weight: bold;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 100px;
+	width: 100%;
+	border: none;
+	height: 48px;
+	background: linear-gradient(90deg, #385ED0 0%, #8A8BF0 100%);
+	cursor: pointer;
+}
