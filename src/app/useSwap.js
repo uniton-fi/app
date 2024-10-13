@@ -19,7 +19,7 @@ export const useSwap = () => {
             .storeCoins(limit ?? 0)
             .storeRef(Vault.packSwapParams({}))
             .endCell()
-        const boc = cell.toBoc().toString('hex');
+        const boc = cell.toBoc().toString('base64');
 
         const sendAmount = toNano(amount) + toNano('0.2');
         const myTransaction = {
