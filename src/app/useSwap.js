@@ -18,7 +18,7 @@ export const useSwap = () => {
             .storeUint(0, 1)
             .storeCoins(limit ?? 0)
             .storeMaybeRef(null)
-            .storeRef(Vaultw.packSwapParams({
+            .storeRef(Vault.packSwapParams({
                 deadline: Math.floor(Date.now() / 1000) + 60,
                 recipientAddress: Address.parse(walletAddress)
             }))
