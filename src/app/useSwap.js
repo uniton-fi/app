@@ -30,7 +30,7 @@ export const useSwap = () => {
             validUntil: Math.floor(Date.now() / 1000) + 60, // 60 sec
             messages: [
                 {
-                    address: poolAddress.toString(),
+                    address: 'EQDa4VOnTYlLvDJ0gZjNYm5PXfSmmtL6Vs6A_CZEtXCNICq_',
                     amount: sendAmount.toString(),
                     payload: boc
                 }
