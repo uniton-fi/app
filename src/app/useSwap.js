@@ -6,7 +6,7 @@ import {useTonConnectUI, useTonAddress} from "@tonconnect/ui-react";
 
 export const useSwap = () => {
     const [tonConnectUI, setOptions] = useTonConnectUI();
-    const val = useTonAddress();
+    const walletAddress = useTonAddress();
 
     const confirmSwap = async (amount, limit=0) => {
         const poolAddress = Address.parse('EQA-X_yo3fzzbDbJ_0bzFWKqtRuZFIRa1sJsveZJ1YpViO3r');
@@ -18,7 +18,10 @@ export const useSwap = () => {
             .storeUint(0, 1)
             .storeCoins(limit ?? 0)
             .storeMaybeRef(null)
-            .storeRef(Vault.packSwapParams({}))
+            .storeRef(Vault.packSwapParams({
+                deadline: Math.floor(Date.now() / 1000) + 60,
+                recipientAddress: walletAddress
+            }))
             .endCell()
         const boc = cell.toBoc().toString('base64');
 
