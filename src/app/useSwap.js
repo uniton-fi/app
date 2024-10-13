@@ -17,6 +17,7 @@ export const useSwap = () => {
             .storeAddress(poolAddress)
             .storeUint(0, 1)
             .storeCoins(limit ?? 0)
+            .storeMaybeRef(null)
             .storeRef(Vault.packSwapParams({}))
             .endCell()
         const boc = cell.toBoc().toString('base64');
