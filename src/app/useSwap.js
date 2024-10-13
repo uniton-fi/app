@@ -20,7 +20,7 @@ export const useSwap = () => {
             .storeMaybeRef(null)
             .storeRef(Vault.packSwapParams({
                 deadline: Math.floor(Date.now() / 1000) + 60,
-                recipientAddress: walletAddress
+                recipientAddress: Address.parse(walletAddress)
             }))
             .endCell()
         const boc = cell.toBoc().toString('base64');
