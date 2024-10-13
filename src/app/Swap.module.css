@@ -72,5 +72,37 @@
 	border: none;
 	height: 48px;
 	background: linear-gradient(90deg, #385ED0 0%, #8A8BF0 100%);
+	color: white;
 	cursor: pointer;
+	margin-top: auto;
+}
+
+.detailsContainer {
+	display: flex;
+	align-items: center;
+	margin-top: 16px;
+	margin-bottom: 16px;
+	width: 100%;
+}
+
+.markContainer {
+	border-radius: 50%;
+	background-color: var(--accent);
+	width: 16px;
+	height: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.detailsText {
+	margin-left: 8px;
+	font-size: 14px;
+	color: var(--light-gray);
+}
+
+.detailsExpand {
+	flex-grow: 1;
+	display: flex;
+	justify-content: end;
 }

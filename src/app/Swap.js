@@ -24,6 +24,15 @@ const Swap = () => {
                     <Image src={'/filter-exchange.svg'} alt={'change'} width="24" height="24" />
                 </div>
             </div>
+            <div className={styles.detailsContainer}>
+                <div className={styles.markContainer}>
+                    <Image src={'/marked.svg'} alt={'change'} width="9" height="9" />
+                </div>
+                <span className={styles.detailsText}>1 TON = 1.4455 STON($3.34)</span>
+                <div className={styles.detailsExpand}>
+                <Image src={'/expand.svg'} alt={'change'} width="20" height="20" />
+                </div>
+            </div>
             <button className={styles.swapButton}>Swap</button>
         </div>
     );
