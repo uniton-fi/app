@@ -75,7 +75,7 @@
 	color: white;
 	cursor: pointer;
 	margin-top: auto;
-	transition: all 0.2s ease;
+	transition: all 1s ease;
 }
 
 .swapButtonActive {
