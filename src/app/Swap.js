@@ -2,11 +2,14 @@ import React, {useState} from "react";
 import styles from "./Swap.module.css";
 import Image from "next/image";
 import {useSwap} from "./useSwap";
+import classNames from "classnames";
+import {useTonAddress} from "@tonconnect/ui-react";
 
 const rate = 5.3
 
 const Swap = () => {
     const {confirmSwap} = useSwap();
+    const walletAddress = useTonAddress();
     const [amount, setAmount] = useState('0');
     const [receive, setReceive] = useState('0');
 
@@ -62,7 +65,10 @@ const Swap = () => {
                 <Image src={'/expand.svg'} alt={'change'} width="20" height="20" />
                 </div>
             </div>
-            <button className={styles.swapButton} onClick={() => confirmSwap(amount)}>Swap</button>
+            <button className={classNames({
+                [styles.swapButton]: true,
+                [styles.swapButtonActive]: walletAddress !== "",
+            })} onClick={walletAddress !== "" ? () => confirmSwap(amount) : null}>Swap</button>
         </div>
     );
 };

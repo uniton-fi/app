@@ -71,10 +71,15 @@
 	width: 100%;
 	border: none;
 	height: 48px;
-	background: linear-gradient(90deg, #385ED0 0%, #8A8BF0 100%);
+	background: var(--dark-gray);
 	color: white;
 	cursor: pointer;
 	margin-top: auto;
+	transition: all 0.2s ease;
+}
+
+.swapButtonActive {
+	background: linear-gradient(90deg, #385ED0 0%, #8A8BF0 100%);
 }
 
 .detailsContainer {
